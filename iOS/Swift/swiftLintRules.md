@@ -1,5 +1,5 @@
 
-| identifier | opt-in | correctable | enabledinyourconfig | kind | analyzer | configuration |
+| identifier | opt-in | correctable | enabled in your config | kind | analyzer | configuration |
 | --- | --- | --- | --- | --- | --- | --- |
 | anyobject_protocol | yes | yes | no | lint | no | warning |
 | array_init | yes | no | no | lint | no | warning |
@@ -169,5 +169,3 @@
 | xct_specific_matcher | yes | no | no | idiomatic | no | warning |
 | xctfail_message | no | no | yes | idiomatic | no | warning |
 | yoda_condition | yes | no | no | lint | no | warning |
-
-
