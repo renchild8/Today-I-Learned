@@ -1606,7 +1606,7 @@ func example(foo: Foo) {
 `empty_parameters` | 有効 | はい | style | いいえ | 3.0.0 
 
 Prefer `() -> ` over `Void -> `.  
-`Void -> `ではなく`() -> `を使う
+`Void -> `ではなく`() -> `を使う。
 
 ### Examples
 
@@ -7902,7 +7902,7 @@ TODOs and FIXMEs should be resolved.
 --- | --- | --- | --- | --- | ---
 `trailing_comma` | 有効 | はい | style | いいえ | 3.0.0 
 
-Trailing commas in arrays and dictionaries should be avoided/enforced.
+Trailing commas in arrays and dictionaries should be avoided/enforced.  
 配列や辞書の末尾のカンマは使わない。
 
 ### Examples
@@ -12465,3 +12465,5 @@ func testFoo() {
 ```
 
 </details>
+
+
