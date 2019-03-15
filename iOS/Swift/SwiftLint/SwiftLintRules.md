@@ -85,11 +85,12 @@
 
 ## Block Based KVO
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`block_based_kvo` | Enabled | No | idiomatic | No | 3.0.0 
+`block_based_kvo` | 有効 | いいえ | idiomatic | いいえ | 3.0.0 
 
-Prefer the new block based KVO API with keypaths when using Swift 3.2 or later.
+Prefer the new block based KVO API with keypaths when using Swift 3.2 or later.  
+Swift 3.2以降を使用する場合は、新しいブロックベースのKVO APIとキーパスを使用する。
 
 ### Examples
 
@@ -128,11 +129,12 @@ class Foo: NSObject {
 
 ## Class Delegate Protocol
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`class_delegate_protocol` | Enabled | No | lint | No | 3.0.0 
+`class_delegate_protocol` | 有効 | いいえ | lint | いいえ | 3.0.0 
 
-Delegate protocols should be class-only so they can be weakly referenced.
+Delegate protocols should be class-only so they can be weakly referenced.  
+`Delegate Protocol`は`weak`で保持される可能性があるため，`class-only`な`Protocol`にする。
 
 ### Examples
 
@@ -205,11 +207,12 @@ protocol FooDelegate: NSObjectProtocol {}
 
 ## Closing Brace Spacing
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`closing_brace` | Enabled | Yes | style | No | 3.0.0 
+`closing_brace` | 有効 | はい | style | いいえ | 3.0.0 
 
-Closing brace with closing parenthesis should not have any whitespaces in the middle.
+Closing brace with closing parenthesis should not have any whitespaces in the middle.  
+`}`の後に`)`が続く場合はその間に空白を入れない。
 
 ### Examples
 
@@ -244,11 +247,12 @@ Closing brace with closing parenthesis should not have any whitespaces in the mi
 
 ## Closure Parameter Position
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`closure_parameter_position` | Enabled | No | style | No | 3.0.0 
+`closure_parameter_position` | 有効 | いいえ | style | いいえ | 3.0.0 
 
-Closure parameters should be on the same line as opening brace.
+Closure parameters should be on the same line as opening brace.  
+クロージャの引数リストはクロージャの始まりの`{`と同じ行に書く。
 
 ### Examples
 
@@ -394,11 +398,12 @@ let mediaView: UIView = { [weak self] index in
 
 ## Closure Spacing
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`closure_spacing` | Disabled | Yes | style | No | 3.0.0 
+`closure_spacing` | 無効 | はい | style | いいえ | 3.0.0 
 
-Closure expressions should have a single space inside each brace.
+Closure expressions should have a single space inside each brace.  
+クロージャ内の式はカッコの間に1つのスペースが必要。
 
 ### Examples
 
@@ -447,11 +452,13 @@ filter ↓{ sorted ↓{ $0 < $1}}
 
 ## Colon
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`colon` | Enabled | Yes | style | No | 3.0.0 
+`colon` | 有効 | はい | style | いいえ | 3.0.0 
 
-Colons should be next to the identifier when specifying a type and next to the key in dictionary literals.
+Colons should be next to the identifier when specifying a type and next to the key in dictionary literals.  
+`:`は変数名の直後に書き，型名はその後に1つのスペース開けて書く。  
+また、Dictionaryではkeyの直後に`:`を書き、valueはその後に1つのスペースを開けて書く。
 
 ### Examples
 
@@ -509,7 +516,6 @@ func abc(def: Void, ghi: Void) {}
 ```
 
 ```swift
-// 周斌佳年周斌佳
 let abc: String = "abc:"
 ```
 
@@ -858,11 +864,12 @@ func foo() { let dict = [1↓ : 1] }
 
 ## Comma Spacing
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`comma` | Enabled | Yes | style | No | 3.0.0 
+`comma` | 有効 | はい | style | いいえ | 3.0.0 
 
-There should be no space before and one after any comma.
+There should be no space before and one after any comma.  
+`,`の前にはスペースを入れない。 `,`の後には1つのスペースを入れる。
 
 ### Examples
 
@@ -937,11 +944,12 @@ let result = plus(
 
 ## Compiler Protocol Init
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`compiler_protocol_init` | Enabled | No | lint | No | 3.0.0 
+`compiler_protocol_init` | 有効 | いいえ | lint | いいえ | 3.0.0 
 
-The initializers declared in compiler protocols such as `ExpressibleByArrayLiteral` shouldn't be called directly.
+The initializers declared in compiler protocols such as `ExpressibleByArrayLiteral` shouldn't be called directly.  
+リテラルを直接書き並べて初期化するタイプのinitializerは直接呼び出さない。
 
 ### Examples
 
@@ -978,11 +986,12 @@ let set = ↓Set.init(arrayLiteral: 1, 2)
 
 ## Control Statement
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`control_statement` | Enabled | No | style | No | 3.0.0 
+`control_statement` | 有効 | いいえ | style | いいえ | 3.0.0 
 
-`if`, `for`, `guard`, `switch`, `while`, and `catch` statements shouldn't unnecessarily wrap their conditionals or arguments in parentheses.
+`if`, `for`, `guard`, `switch`, `while`, and `catch` statements shouldn't unnecessarily wrap their conditionals or arguments in parentheses.  
+`if`, `for`, `guard`, `switch`, `while`, `catch`の制御文の条件式部分は`()`で囲まない。
 
 ### Examples
 
@@ -1191,21 +1200,21 @@ do {
 
 ## Custom Rules
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`custom_rules` | Enabled | No | style | No | 3.0.0 
+`custom_rules` | 有効 | いいえ | style | いいえ | 3.0.0 
 
-Create custom rules by providing a regex string. Optionally specify what syntax kinds to match against, the severity level, and what message to display.
-
-
+Create custom rules by providing a regex string. Optionally specify what syntax kinds to match against, the severity level, and what message to display.  
+正規表現文字列を指定してカスタムルールを作成します。必要に応じて、一致する構文の種類、重大度、および表示するメッセージを指定する。
 
 ## Cyclomatic Complexity
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`cyclomatic_complexity` | Enabled | No | metrics | No | 3.0.0 
+`cyclomatic_complexity` | 有効 | いいえ | metrics | いいえ | 3.0.0 
 
-Complexity of function bodies should be limited.
+Complexity of function bodies should be limited.  
+関数をあまり複雑にしない。
 
 ### Examples
 
@@ -1277,11 +1286,12 @@ if true {}; if true {}; if true {}; if true {}; if true {}
 
 ## Discarded Notification Center Observer
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`discarded_notification_center_observer` | Enabled | No | lint | No | 3.0.0 
+`discarded_notification_center_observer` | 有効 | いいえ | lint | いいえ | 3.0.0 
 
-When registering for a notification using a block, the opaque observer that is returned should be stored so it can be removed later.
+When registering for a notification using a block, the opaque observer that is returned should be stored so it can be removed later.  
+observerは後で除去できるように変数に格納する。
 
 ### Examples
 
@@ -1332,11 +1342,12 @@ func foo() -> Any {
 
 ## Discouraged Direct Initialization
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`discouraged_direct_init` | Enabled | No | lint | No | 3.0.0 
+`discouraged_direct_init` | 有効 | いいえ | lint | いいえ | 3.0.0 
 
-Discouraged direct initialization of types that can be harmful.
+Discouraged direct initialization of types that can be harmful.  
+有害な可能性がある型の直接初期化はしない。
 
 ### Examples
 
@@ -1417,11 +1428,12 @@ let foo = bar(bundle: ↓Bundle.init(), device: ↓UIDevice.init())
 
 ## Dynamic Inline
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`dynamic_inline` | Enabled | No | lint | No | 3.0.0 
+`dynamic_inline` | 有効 | いいえ | lint | いいえ | 3.0.0 
 
-Avoid using 'dynamic' and '@inline(__always)' together.
+Avoid using 'dynamic' and '@inline(__always)' together.  
+`dynamic`と `@inline（__ always）`を同時に使わない。
 
 ### Examples
 
@@ -1486,11 +1498,12 @@ dynamic
 
 ## Empty Enum Arguments
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`empty_enum_arguments` | Enabled | Yes | style | No | 3.0.0 
+`empty_enum_arguments` | 有効 | はい | style | いいえ | 3.0.0 
 
-Arguments can be omitted when matching enums with associated types if they are not used.
+Arguments can be omitted when matching enums with associated types if they are not used.  
+列挙型が関連付けられた型と一致しない場合は、引数を省略する。
 
 ### Examples
 
@@ -1588,11 +1601,12 @@ func example(foo: Foo) {
 
 ## Empty Parameters
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`empty_parameters` | Enabled | Yes | style | No | 3.0.0 
+`empty_parameters` | 有効 | はい | style | いいえ | 3.0.0 
 
-Prefer `() -> ` over `Void -> `.
+Prefer `() -> ` over `Void -> `.  
+`Void -> `ではなく`() -> `を使う
 
 ### Examples
 
@@ -1659,11 +1673,12 @@ let foo: ↓(Void) -> () throws -> Void)
 
 ## Empty Parentheses with Trailing Closure
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`empty_parentheses_with_trailing_closure` | Enabled | Yes | style | No | 3.0.0 
+`empty_parentheses_with_trailing_closure` | 有効 | はい | style | いいえ | 3.0.0 
 
-When using trailing closures, empty parentheses should be avoided after the method call.
+When using trailing closures, empty parentheses should be avoided after the method call.  
+末尾のクロージャを使うときは、メソッド呼び出しの後に空の括弧を使わない。
 
 ### Examples
 
@@ -1745,11 +1760,12 @@ func foo() -> [Int] {
 
 ## Fatal Error Message
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`fatal_error_message` | Disabled | No | idiomatic | No | 3.0.0 
+`fatal_error_message` | 無効 | いいえ | idiomatic | いいえ | 3.0.0 
 
-A fatalError call should have a message.
+A fatalError call should have a message.  
+fatalError呼び出しにはメッセージが必要。
 
 ### Examples
 
@@ -1794,11 +1810,12 @@ func foo() {
 
 ## File Line Length
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`file_length` | Enabled | No | metrics | No | 3.0.0 
+`file_length` | 有効 | いいえ | metrics | いいえ | 3.0.0 
 
-Files should not span too many lines.
+Files should not span too many lines.  
+ファイルの行数は長くしない。
 
 ### Examples
 
@@ -3029,11 +3046,12 @@ print("swiftlint")
 
 ## For Where
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`for_where` | Enabled | No | idiomatic | No | 3.0.0 
+`for_where` | 有効 | いいえ | idiomatic | いいえ | 3.0.0 
 
-`where` clauses are preferred over a single `if` inside a `for`.
+`where` clauses are preferred over a single `if` inside a `for`.  
+for文において，その内部でifによる値チェック処理しかしないのであればwhere句を使用する。
 
 ### Examples
 
@@ -3131,11 +3149,12 @@ for user in users {
 
 ## Force Cast
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`force_cast` | Enabled | No | idiomatic | No | 3.0.0 
+`force_cast` | 有効 | いいえ | idiomatic | いいえ | 3.0.0 
 
-Force casts should be avoided.
+Force casts should be avoided.  
+強制キャストを行わない。
 
 ### Examples
 
@@ -3162,11 +3181,12 @@ NSNumber() ↓as! Int
 
 ## Force Try
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`force_try` | Enabled | No | idiomatic | No | 3.0.0 
+`force_try` | 有効 | いいえ | idiomatic | いいえ | 3.0.0 
 
-Force tries should be avoided.
+Force tries should be avoided.  
+`try!`を行わない。
 
 ### Examples
 
@@ -3191,11 +3211,12 @@ func a() throws {}; ↓try! a()
 
 ## Force Unwrapping
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`force_unwrapping` | Disabled | No | idiomatic | No | 3.0.0 
+`force_unwrapping` | 無効 | いいえ | idiomatic | いいえ | 3.0.0 
 
-Force unwrapping should be avoided.
+Force unwrapping should be avoided.  
+強制アンラップは行わない。
 
 ### Examples
 
@@ -3334,21 +3355,23 @@ open var computed: String { return foo.bar↓! }
 
 ## Function Body Length
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`function_body_length` | Enabled | No | metrics | No | 3.0.0 
+`function_body_length` | 有効 | いいえ | metrics | いいえ | 3.0.0 
 
-Functions bodies should not span too many lines.
+Functions bodies should not span too many lines.  
+関数の行数は長くしない。
 
 
 
 ## Function Parameter Count
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`function_parameter_count` | Enabled | No | metrics | No | 3.0.0 
+`function_parameter_count` | 有効 | いいえ | metrics | いいえ | 3.0.0 
 
-Number of function parameters should be low.
+Number of function parameters should be low.  
+関数の引数の数は多くしない。
 
 ### Examples
 
@@ -3424,11 +3447,12 @@ init(a: Int, b: Int, c: Int, d: Int, e: Int, f: Int) {}
 
 ## Generic Type Name
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`generic_type_name` | Enabled | No | idiomatic | No | 3.0.0 
+`generic_type_name` | 有効 | いいえ | idiomatic | いいえ | 3.0.0 
 
-Generic type name should only contain alphanumeric characters, start with an uppercase character and span between 1 and 20 characters in length.
+Generic type name should only contain alphanumeric characters, start with an uppercase character and span between 1 and 20 characters in length.  
+ジェネリクスの型名は大文字で始まる英数字のみで構成され、長さは1から20文字の範囲にする。
 
 ### Examples
 
@@ -3626,11 +3650,12 @@ enum Foo<↓type> {}
 
 ## Identifier Name
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`identifier_name` | Enabled | No | style | No | 3.0.0 
+`identifier_name` | 有効 | いいえ | style | いいえ | 3.0.0 
 
-Identifier names should only contain alphanumeric characters and start with a lowercase character or should only contain capital letters. In an exception to the above, variable names may start with a capital letter when they are declared static and immutable. Variable names should not be too long or too short.
+Identifier names should only contain alphanumeric characters and start with a lowercase character or should only contain capital letters. In an exception to the above, variable names may start with a capital letter when they are declared static and immutable. Variable names should not be too long or too short.  
+変数名等の識別子は小文字で始まるか全て大文字の英数字だけで構成させる。
 
 ### Examples
 
@@ -3747,11 +3772,12 @@ enum Foo { case ↓MyEnum }
 
 ## Implicit Getter
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`implicit_getter` | Enabled | No | style | No | 3.0.0 
+`implicit_getter` | 有効 | いいえ | style | いいえ | 3.0.0 
 
-Computed read-only properties and subscripts should avoid using the get keyword.
+Computed read-only properties and subscripts should avoid using the get keyword.  
+読み取り専用のプロパティで`get`を使わない。
 
 ### Examples
 
@@ -3950,11 +3976,12 @@ class Foo {
 
 ## Implicitly Unwrapped Optional
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`implicitly_unwrapped_optional` | Disabled | No | idiomatic | No | 3.0.0 
+`implicitly_unwrapped_optional` | 無効 | いいえ | idiomatic | いいえ | 3.0.0 
 
-Implicitly unwrapped optionals should be avoided when possible.
+Implicitly unwrapped optionals should be avoided when possible.  
+`ImplicitlyUnwrappedOptional<T>`(`!`が付く型)は使わない。
 
 ### Examples
 
@@ -4039,11 +4066,12 @@ func foo(int: Int!) {}
 
 ## Inert Defer
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`inert_defer` | Enabled | No | lint | No | 3.0.0 
+`inert_defer` | 有効 | いいえ | lint | いいえ | 3.0.0 
 
-If defer is at the end of its parent scope, it will be executed right where it is anyway.
+If defer is at the end of its parent scope, it will be executed right where it is anyway.  
+`defer`文はスコープの末尾に書かない。
 
 ### Examples
 
@@ -4099,11 +4127,12 @@ func example2() {
 
 ## Is Disjoint
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`is_disjoint` | Enabled | No | idiomatic | No | 3.0.0 
+`is_disjoint` | 有効 | いいえ | idiomatic | いいえ | 3.0.0 
 
-Prefer using `Set.isDisjoint(with:)` over `Set.intersection(_:).isEmpty`.
+Prefer using `Set.isDisjoint(with:)` over `Set.intersection(_:).isEmpty`.  
+`Set.intersection(_:).isEmpty` ではなく `Set.isDisjoint(with:)` を使う。
 
 ### Examples
 
@@ -4144,11 +4173,12 @@ let isObjc = !objcAttributes.↓intersection(dictionary.enclosedSwiftAttributes)
 
 ## Large Tuple
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`large_tuple` | Enabled | No | metrics | No | 3.0.0 
+`large_tuple` | 有効 | いいえ | metrics | いいえ | 3.0.0 
 
-Tuples shouldn't have too many members. Create a custom type instead.
+Tuples shouldn't have too many members. Create a custom type instead.  
+タプルにはあまり多くの値を持たせない。
 
 ### Examples
 
@@ -4305,11 +4335,12 @@ func getDictionaryAndInt() -> (Dictionary<Int, ↓(String, String, String)>, Int
 
 ## Leading Whitespace
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`leading_whitespace` | Enabled | Yes | style | No | 3.0.0 
+`leading_whitespace` | 有効 | はい | style | いいえ | 3.0.0 
 
-Files should not contain leading whitespace.
+Files should not contain leading whitespace.  
+ファイルの先頭は空白にしない。
 
 ### Examples
 
@@ -4341,11 +4372,12 @@ Files should not contain leading whitespace.
 
 ## Legacy CGGeometry Functions
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`legacy_cggeometry_functions` | Enabled | Yes | idiomatic | No | 3.0.0 
+`legacy_cggeometry_functions` | 有効 | はい | idiomatic | いいえ | 3.0.0 
 
-Struct extension properties and methods are preferred over legacy functions
+Struct extension properties and methods are preferred over legacy functions  
+CGRect系の古いメソッドは使わない(例:CGRectGetWidth(rect)は使わず、CGRect.widthを使う)
 
 ### Examples
 
@@ -4522,11 +4554,12 @@ rect1.intersects(rect2)
 
 ## Legacy Constant
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`legacy_constant` | Enabled | Yes | idiomatic | No | 3.0.0 
+`legacy_constant` | 有効 | はい | idiomatic | いいえ | 3.0.0 
 
-Struct-scoped constants are preferred over legacy global constants.
+Struct-scoped constants are preferred over legacy global constants.  
+古い定数は使わない(例:CGRectZeroは使わず、CGRect.zeroを使う)
 
 ### Examples
 
@@ -4623,11 +4656,12 @@ Float.pi
 
 ## Legacy Constructor
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`legacy_constructor` | Enabled | Yes | idiomatic | No | 3.0.0 
+`legacy_constructor` | 有効 | はい | idiomatic | いいえ | 3.0.0 
 
-Swift constructors are preferred over legacy convenience functions.
+Swift constructors are preferred over legacy convenience functions.  
+古いコンストラクタは使わない(例:CGRectMake()を使わず、CGRect()を使う)
 
 ### Examples
 
@@ -4830,11 +4864,12 @@ UIOffset(horizontal: horizontal, vertical: vertical)
 
 ## Legacy NSGeometry Functions
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`legacy_nsgeometry_functions` | Enabled | Yes | idiomatic | No | 3.0.0 
+`legacy_nsgeometry_functions` | 有効 | はい | idiomatic | いいえ | 3.0.0 
 
-Struct extension properties and methods are preferred over legacy functions
+Struct extension properties and methods are preferred over legacy functions  
+NSRect系の古い関数は使わない(例:NSWidth()は使わず、NSRect.widthを使う)
 
 ### Examples
 
@@ -5004,11 +5039,12 @@ rect1.intersects(rect2)
 
 ## Line Length
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`line_length` | Enabled | No | metrics | No | 3.0.0 
+`line_length` | 有効 | いいえ | metrics | いいえ | 3.0.0 
 
-Lines should not span too many characters.
+Lines should not span too many characters.  
+1行の長さを多くしすぎない。
 
 ### Examples
 
@@ -5055,11 +5091,12 @@ Lines should not span too many characters.
 
 ## Mark
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`mark` | Enabled | Yes | lint | No | 3.0.0 
+`mark` | 有効 | はい | lint | いいえ | 3.0.0 
 
-MARK comment should be in valid format. e.g. '// MARK: ...' or '// MARK: - ...'
+MARK comment should be in valid format. e.g. '// MARK: ...' or '// MARK: - ...'  
+MARKコメントは有効な形式で記述する。
 
 ### Examples
 
@@ -5196,11 +5233,12 @@ extension MarkTest {}
 
 ## Multiple Closures with Trailing Closure
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`multiple_closures_with_trailing_closure` | Enabled | No | style | No | 3.0.0 
+`multiple_closures_with_trailing_closure` | 有効 | いいえ | style | いいえ | 3.0.0 
 
-Trailing closure syntax should not be used when passing more than one closure argument.
+Trailing closure syntax should not be used when passing more than one closure argument.  
+末尾のクロージャ構文は、複数のクロージャ引数を渡すときには使わない。
 
 ### Examples
 
@@ -5257,11 +5295,13 @@ UIView.animate(withDuration: 1.0, animations: {
 
 ## Nesting
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`nesting` | Enabled | No | metrics | No | 3.0.0 
+`nesting` | 有効 | いいえ | metrics | いいえ | 3.0.0 
 
-Types should be nested at most 1 level deep, and statements should be nested at most 5 levels deep.
+Types should be nested at most 1 level deep, and statements should be nested at most 5 levels deep.  
+型のネストは最大で1つにする。
+ステートメントのネストは最大で5つにする。
 
 ### Examples
 
@@ -5374,11 +5414,12 @@ func func4() { func func5() {
 
 ## No Fallthrough Only
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`no_fallthrough_only` | Enabled | No | idiomatic | No | 3.0.0 
+`no_fallthrough_only` | 有効 | いいえ | idiomatic | いいえ | 3.0.0 
 
-Fallthroughs can only be used if the `case` contains at least one other statement.
+Fallthroughs can only be used if the `case` contains at least one other statement.  
+`fallthrough`は他のcaseが少なくとも1つ含まれている場合にのみ使える。
 
 ### Examples
 
@@ -5552,11 +5593,12 @@ case "abc":
 
 ## Notification Center Detachment
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`notification_center_detachment` | Enabled | No | lint | No | 3.0.0 
+`notification_center_detachment` | 有効 | いいえ | lint | いいえ | 3.0.0 
 
-An object should only remove itself as an observer in `deinit`.
+An object should only remove itself as an observer in `deinit`.  
+自分自身を`removeObserver`する時は`deinit`を使う。
 
 ### Examples
 
@@ -5600,11 +5642,12 @@ class Foo {
 
 ## Opening Brace Spacing
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`opening_brace` | Enabled | Yes | style | No | 3.0.0 
+`opening_brace` | 有効 | はい | style | いいえ | 3.0.0 
 
-Opening braces should be preceded by a single space and on the same line as the declaration.
+Opening braces should be preceded by a single space and on the same line as the declaration.  
+`{`は宣言をした行に記述し、`{`の前には1つのスペースを開けて書く。
 
 ### Examples
 
@@ -5765,11 +5808,12 @@ struct Parent {
 
 ## Operator Usage Whitespace
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`operator_usage_whitespace` | Disabled | Yes | style | No | 3.0.0 
+`operator_usage_whitespace` | 無効 | はい | style | いいえ | 3.0.0 
 
-Operators should be surrounded by a single whitespace when they are being used.
+Operators should be surrounded by a single whitespace when they are being used.  
+演算子を使う時はスペースで区切る。
 
 ### Examples
 
@@ -5960,11 +6004,12 @@ let v8 = 1↓ <<  (6)
 
 ## Operator Function Whitespace
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`operator_whitespace` | Enabled | No | style | No | 3.0.0 
+`operator_whitespace` | 有効 | いいえ | style | いいえ | 3.0.0 
 
-Operators should be surrounded by a single whitespace when defining them.
+Operators should be surrounded by a single whitespace when defining them.  
+演算子を定義するとき、演算子は1つの空白で囲まれるべきです。
 
 ### Examples
 
@@ -6026,11 +6071,12 @@ func abc(lhs: Int, rhs: Int) -> Int {}
 
 ## Private over fileprivate
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`private_over_fileprivate` | Enabled | Yes | idiomatic | No | 3.0.0 
+`private_over_fileprivate` | 有効 | はい | idiomatic | いいえ | 3.0.0 
 
-Prefer `private` over `fileprivate` declarations.
+Prefer `private` over `fileprivate` declarations.  
+`fileprivate`より`private`を優先します。
 
 ### Examples
 
@@ -6105,11 +6151,12 @@ fileprivate(set) var myInt = 4
 
 ## Private Unit Test
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`private_unit_test` | Enabled | No | lint | No | 3.0.0 
+`private_unit_test` | 有効 | いいえ | lint | いいえ | 3.0.0 
 
-Unit tests marked private are silently skipped.
+Unit tests marked private are silently skipped.  
+非公開とマークされた単体テストはスキップされる。
 
 ### Examples
 
@@ -6198,11 +6245,12 @@ public class FooTest: XCTestCase { func test1() {}
 
 ## Protocol Property Accessors Order
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`protocol_property_accessors_order` | Enabled | Yes | style | No | 3.0.0 
+`protocol_property_accessors_order` | 有効 | はい | style | いいえ | 3.0.0 
 
-When declaring properties in protocols, the order of accessors should be `get set`.
+When declaring properties in protocols, the order of accessors should be `get set`.  
+プロトコルでプロパティを宣言するときは、アクセサの順序は`get set`の順番に記述する。
 
 ### Examples
 
@@ -6243,11 +6291,12 @@ protocol Foo {
 
 ## Quick Discouraged Call
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`quick_discouraged_call` | Disabled | No | lint | No | 3.0.0 
+`quick_discouraged_call` | 無効 | いいえ | lint | いいえ | 3.0.0 
 
-Discouraged call inside 'describe' and/or 'context' block.
+Discouraged call inside 'describe' and/or 'context' block.  
+`Quick`の`describe`および/または `context`ブロック内の呼び出しをしない。
 
 ### Examples
 
@@ -6586,11 +6635,12 @@ class TotoTests: QuickSpec {
 
 ## Redundant Discardable Let
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`redundant_discardable_let` | Enabled | Yes | style | No | 3.0.0 
+`redundant_discardable_let` | 有効 | はい | style | いいえ | 3.0.0 
 
-Prefer `_ = foo()` over `let _ = foo()` when discarding a result from a function.
+Prefer `_ = foo()` over `let _ = foo()` when discarding a result from a function.  
+関数からの結果を破棄するときは、`let _ = foo()`よりも`_ = foo()`を優先してください。
 
 ### Examples
 
@@ -6641,11 +6691,12 @@ if _ = foo() { ↓let _ = bar() }
 
 ## Redundant Optional Initialization
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`redundant_optional_initialization` | Enabled | Yes | idiomatic | No | 3.0.0 
+`redundant_optional_initialization` | 有効 | はい | idiomatic | いいえ | 3.0.0 
 
-Initializing an optional variable with nil is redundant.
+Initializing an optional variable with nil is redundant.  
+optional変数を`= nil`で初期化しない。
 
 ### Examples
 
@@ -6755,11 +6806,13 @@ func funcName() {
 
 ## Redundant Set Access Control Rule
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`redundant_set_access_control` | Enabled | No | idiomatic | No | 4.1.0 
+`redundant_set_access_control` | 有効 | いいえ | idiomatic | いいえ | 4.1.0 
 
-Property setter access level shouldn't be explicit if it's the same as the variable access level.
+Property setter access level shouldn't be explicit if it's the same as the variable access level.  
+プロパティセッターのアクセスレベルは、変数のアクセスレベルと同じであれば明示的に指定しない。
+
 
 ### Examples
 
@@ -6832,11 +6885,12 @@ fileprivate class A {
 
 ## Redundant String Enum Value
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`redundant_string_enum_value` | Enabled | No | idiomatic | No | 3.0.0 
+`redundant_string_enum_value` | 有効 | いいえ | idiomatic | いいえ | 3.0.0 
 
-String enum values can be omitted when they are equal to the enumcase name.
+String enum values can be omitted when they are equal to the enumcase name.  
+文字列のenum値は、それらが`enumcase name`と等しい場合は省略できます。
 
 ### Examples
 
@@ -6914,11 +6968,12 @@ enum Numbers: String {
 
 ## Redundant Void Return
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`redundant_void_return` | Enabled | Yes | idiomatic | No | 3.0.0 
+`redundant_void_return` | 有効 | はい | idiomatic | いいえ | 3.0.0 
 
-Returning Void in a function declaration is redundant.
+Returning Void in a function declaration is redundant.  
+Voidを返す関数に`-> Void`を書かない。
 
 ### Examples
 
@@ -7014,11 +7069,12 @@ protocol Foo {
 
 ## Returning Whitespace
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`return_arrow_whitespace` | Enabled | Yes | style | No | 3.0.0 
+`return_arrow_whitespace` | 有効 | はい | style | いいえ | 3.0.0 
 
-Return arrow and return type should be separated by a single space or on a separate line.
+Return arrow and return type should be separated by a single space or on a separate line.  
+`->`と`-> <T>`は、1つのスペースまたは別の行で区切る。
 
 ### Examples
 
@@ -7107,11 +7163,12 @@ var abc = {(param: Int)↓->Bool in }
 
 ## Shorthand Operator
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`shorthand_operator` | Enabled | No | style | No | 3.0.0 
+`shorthand_operator` | 有効 | いいえ | style | いいえ | 3.0.0 
 
-Prefer shorthand operators (+=, -=, *=, /=) over doing the operation and assigning.
+Prefer shorthand operators (+=, -=, *=, /=) over doing the operation and assigning.  
+操作を実行して代入するよりも、省略形の演算子`(+=, -=,*=,/=)`を使う。
 
 ### Examples
 
@@ -7376,11 +7433,12 @@ n = n - i / outputLength
 
 ## Statement Position
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`statement_position` | Enabled | Yes | style | No | 3.0.0 
+`statement_position` | 有効 | はい | style | いいえ | 3.0.0 
 
-Else and catch should be on the same line, one space after the previous declaration.
+Else and catch should be on the same line, one space after the previous declaration.  
+`Else`と` catch`は、前の宣言の1スペース後の、同じ行になければなりません。
 
 ### Examples
 
@@ -7445,11 +7503,12 @@ catch {
 
 ## Strict fileprivate
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`strict_fileprivate` | Disabled | No | idiomatic | No | 3.0.0 
+`strict_fileprivate` | 無効 | いいえ | idiomatic | いいえ | 3.0.0 
 
-`fileprivate` should be avoided.
+`fileprivate` should be avoided.  
+`fileprivate`を使わない。
 
 ### Examples
 
@@ -7528,21 +7587,23 @@ struct Inter {
 
 ## Superfluous Disable Command
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`superfluous_disable_command` | Enabled | No | lint | No | 3.0.0 
+`superfluous_disable_command` | 有効 | いいえ | lint | いいえ | 3.0.0 
 
-SwiftLint 'disable' commands are superfluous when the disabled rule would not have triggered a violation in the disabled region.
+SwiftLint 'disable' commands are superfluous when the disabled rule would not have triggered a violation in the disabled region.  
+無効化されたルールが無効化された領域で違反を引き起こさなかった場合、SwiftLintの「無効化」コマンドは不要です。
 
 
 
 ## Switch and Case Statement Alignment
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`switch_case_alignment` | Enabled | No | style | No | 3.0.0 
+`switch_case_alignment` | 有効 | いいえ | style | いいえ | 3.0.0 
 
-Case statements should vertically align with their enclosing switch statement, or indented if configured otherwise.
+Case statements should vertically align with their enclosing switch statement, or indented if configured otherwise.  
+`case`は、それを囲む`switch`と垂直方向に揃わせる、または字下げする。
 
 ### Examples
 
@@ -7651,11 +7712,12 @@ if aBool {
 
 ## Syntactic Sugar
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`syntactic_sugar` | Enabled | No | idiomatic | No | 3.0.0 
+`syntactic_sugar` | 有効 | いいえ | idiomatic | いいえ | 3.0.0 
 
-Shorthand syntactic sugar should be used, i.e. [Int] instead of Array<Int>.
+Shorthand syntactic sugar should be used, i.e. [Int] instead of Array<Int>.  
+`Array<Int>`ではなく、糖衣構文の`[Int]`を使う。
 
 ### Examples
 
@@ -7764,11 +7826,12 @@ let x: ↓Swift.Optional<String>
 
 ## Todo
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`todo` | Enabled | No | lint | No | 3.0.0 
+`todo` | 有効 | いいえ | lint | いいえ | 3.0.0 
 
-TODOs and FIXMEs should be resolved.
+TODOs and FIXMEs should be resolved.  
+`TODO`や`FIXME`などは残さない。
 
 ### Examples
 
@@ -7835,11 +7898,12 @@ TODOs and FIXMEs should be resolved.
 
 ## Trailing Comma
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`trailing_comma` | Enabled | Yes | style | No | 3.0.0 
+`trailing_comma` | 有効 | はい | style | いいえ | 3.0.0 
 
 Trailing commas in arrays and dictionaries should be avoided/enforced.
+配列や辞書の末尾のカンマは使わない。
 
 ### Examples
 
@@ -7952,11 +8016,12 @@ foo([1: "\(error)"↓,])
 
 ## Trailing Newline
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`trailing_newline` | Enabled | Yes | style | No | 3.0.0 
+`trailing_newline` | 有効 | はい | style | いいえ | 3.0.0 
 
-Files should have a single trailing newline.
+Files should have a single trailing newline.  
+ファイルの末尾は1つの空行にする。
 
 ### Examples
 
@@ -7988,11 +8053,12 @@ let a = 0
 
 ## Trailing Semicolon
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`trailing_semicolon` | Enabled | Yes | idiomatic | No | 3.0.0 
+`trailing_semicolon` | 有効 | はい | idiomatic | いいえ | 3.0.0 
 
-Lines should not have trailing semicolons.
+Lines should not have trailing semicolons.  
+行の末尾にセミコロンを付けない。
 
 ### Examples
 
@@ -8040,11 +8106,12 @@ let a = 0↓; ; ;
 
 ## Trailing Whitespace
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`trailing_whitespace` | Enabled | Yes | style | No | 3.0.0 
+`trailing_whitespace` | 有効 | はい | style | いいえ | 3.0.0 
 
-Lines should not have trailing whitespace.
+Lines should not have trailing whitespace.  
+行の末尾に空白を入れない。
 
 ### Examples
 
@@ -8096,11 +8163,12 @@ let name: String
 
 ## Type Body Length
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`type_body_length` | Enabled | No | metrics | No | 3.0.0 
+`type_body_length` | 有効 | いいえ | metrics | いいえ | 3.0.0 
 
-Type bodies should not span too many lines.
+Type bodies should not span too many lines.  
+型の行数を多くしすぎない。
 
 ### Examples
 
@@ -11222,11 +11290,12 @@ let abc = 0
 
 ## Type Name
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`type_name` | Enabled | No | idiomatic | No | 3.0.0 
+`type_name` | 有効 | いいえ | idiomatic | いいえ | 3.0.0 
 
-Type name should only contain alphanumeric characters, start with an uppercase character and span between 3 and 40 characters in length.
+Type name should only contain alphanumeric characters, start with an uppercase character and span between 3 and 40 characters in length.  
+型名は、大文字で始まる英数字のみで構成され、長さは3から40文字の範囲にする。
 
 ### Examples
 
@@ -11399,11 +11468,12 @@ protocol Foo {
 
 ## Unneeded Break in Switch
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`unneeded_break_in_switch` | Enabled | No | idiomatic | No | 3.0.0 
+`unneeded_break_in_switch` | 有効 | いいえ | idiomatic | いいえ | 3.0.0 
 
-Avoid using unneeded break statements.
+Avoid using unneeded break statements.  
+不要な`break`を使わない。
 
 ### Examples
 
@@ -11487,11 +11557,12 @@ case .foo, .foo2 where condition:
 
 ## Unused Closure Parameter
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`unused_closure_parameter` | Enabled | Yes | lint | No | 3.0.0 
+`unused_closure_parameter` | 有効 | はい | lint | いいえ | 3.0.0 
 
-Unused parameter in a closure should be replaced with _.
+Unused parameter in a closure should be replaced with _.  
+クロージャで使っていないパラメーターは`_`に置き換える。
 
 ### Examples
 
@@ -11653,11 +11724,12 @@ func foo () {
 
 ## Unused Enumerated
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`unused_enumerated` | Enabled | No | idiomatic | No | 3.0.0 
+`unused_enumerated` | 有効 | いいえ | idiomatic | いいえ | 3.0.0 
 
-When the index or the item is not used, `.enumerated()` can be removed.
+When the index or the item is not used, `.enumerated()` can be removed.  
+使っていない`.enumerated()`は削除する。
 
 ### Examples
 
@@ -11739,11 +11811,12 @@ for (idx, ↓_) in bar.enumerated() { }
 
 ## Unused Optional Binding
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`unused_optional_binding` | Enabled | No | style | No | 3.0.0 
+`unused_optional_binding` | 有効 | いいえ | style | いいえ | 3.0.0 
 
-Prefer `!= nil` over `let _ =`
+Prefer `!= nil` over `let _ =`  
+`let _ = `によるOptional Bindingではなく` != nil `でOptional判定をする。
 
 ### Examples
 
@@ -11849,11 +11922,12 @@ if case .some(let ↓_) = self {}
 
 ## Valid IBInspectable
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`valid_ibinspectable` | Enabled | No | lint | No | 3.0.0 
+`valid_ibinspectable` | 有効 | いいえ | lint | いいえ | 3.0.0 
 
-@IBInspectable should be applied to variables only, have its type explicit and be of a supported type
+@IBInspectable should be applied to variables only, have its type explicit and be of a supported type  
+`@IBInspectable`は変数にのみ適用し、その型を明示的にし、サポートされている型にする。
 
 ### Examples
 
@@ -11982,11 +12056,12 @@ class Foo {
 
 ## Vertical Parameter Alignment
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`vertical_parameter_alignment` | Enabled | No | style | No | 3.0.0 
+`vertical_parameter_alignment` | 有効 | いいえ | style | いいえ | 3.0.0 
 
-Function parameters should be aligned vertically if they're in multiple lines in a declaration.
+Function parameters should be aligned vertically if they're in multiple lines in a declaration.  
+関数のパラメーターを、宣言内で複数行にする場合は、垂直方向に揃える。
 
 ### Examples
 
@@ -12086,11 +12161,12 @@ func validateFunction(_ file: File,
 
 ## Vertical Whitespace
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`vertical_whitespace` | Enabled | Yes | style | No | 3.0.0 
+`vertical_whitespace` | 有効 | はい | style | いいえ | 3.0.0 
 
-Limit vertical whitespace to a single empty line.
+Limit vertical whitespace to a single empty line.  
+空行は1行のまでにする。
 
 ### Examples
 
@@ -12154,11 +12230,12 @@ class BBBB {}
 
 ## Void Return
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`void_return` | Enabled | Yes | style | No | 3.0.0 
+`void_return` | 有効 | はい | style | いいえ | 3.0.0 
 
-Prefer `-> Void` over `-> ()`.
+Prefer `-> Void` over `-> ()`.  
+`-> ()` よりも `-> Void` を使う。
 
 ### Examples
 
@@ -12245,11 +12322,12 @@ let foo: (ConfigurationTests) -> () throws -> ↓())
 
 ## Weak Delegate
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`weak_delegate` | Enabled | No | lint | No | 3.0.0 
+`weak_delegate` | 有効 | いいえ | lint | いいえ | 3.0.0 
 
-Delegates should be weak to avoid reference cycles.
+Delegates should be weak to avoid reference cycles.  
+`Delegate` は循環参照を避けるために `weak` を使う。
 
 ### Examples
 
@@ -12346,11 +12424,12 @@ class Foo {
 
 ## XCTFail Message
 
-Identifier | Enabled by default | Supports autocorrection | Kind | Analyzer | Minimum Swift Compiler Version
+識別子 | デフォルトで有効 | 自動修正をサポート | 種類 | アナライザ | Swift Compilerの最小バージョン
 --- | --- | --- | --- | --- | ---
-`xctfail_message` | Enabled | No | idiomatic | No | 3.0.0 
+`xctfail_message` | 有効 | いいえ | idiomatic | いいえ | 3.0.0 
 
-An XCTFail call should include a description of the assertion.
+An XCTFail call should include a description of the assertion.  
+`XCTFail`の呼び出しには、アサーションの説明を含める。
 
 ### Examples
 
@@ -12386,5 +12465,3 @@ func testFoo() {
 ```
 
 </details>
-
-
