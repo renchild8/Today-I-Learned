@@ -5,7 +5,7 @@
 sudo gem install bundler
 ```
 
-### fastlaneのインストール
+### Gemfileの作成
 ```
 bundle init
 ```
