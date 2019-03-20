@@ -19,9 +19,7 @@ vim Gemfile
 # Gemfile
 source "https://rubygems.org"
 
-
 gem "fastlane"
-gem "cocoapods"
 ```
 
 ### パス指定でGemをインストール
@@ -43,29 +41,12 @@ bundle exec fastlane init
 ```
 今回は4を選択
 
-
-
 ### fastlane/Fastfileを編集
 ```
-# This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
-#
-# For a list of all available actions, check out
-#
-#     https://docs.fastlane.tools/actions
-#
-# For a list of all available plugins, check out
-#
-#     https://docs.fastlane.tools/plugins/available-plugins
-#
-
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
-
 default_platform(:ios)
 
 platform :ios do
-  desc "Description of what the lane does"
+  desc "Send a success/error message to your Slack group"
   lane :slackTest do
     slack(
        message: "slack Test !!",
@@ -75,3 +56,8 @@ platform :ios do
 end
 ```
 
+### slackTestを実行
+```
+bundle exec fastlane slackTest
+```
+これで通知が来ればOK
