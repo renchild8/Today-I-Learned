@@ -1,6 +1,5 @@
-### 20190226 
+### UIAlertアラートでパスワードを要求
 
-アラートでパスワードを要求
 ```Swift
 func dispTextformAlert(_ vc:UIViewController, title:String, message:String, completion:@escaping ((_ text: String)->Void)={(_ text: String) -> Void in print("OK")}, recallAction: @escaping (()->Void)={() -> Void in print("Cancel")}) -> Void {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
