@@ -1,4 +1,6 @@
-# fastlaneの導入
+# スクリーンショットの自動化
+
+## fastlaneの導入
 
 ### bundlerのインストール
 ```bash
@@ -52,7 +54,6 @@ platform :ios do
   end
 end
 ```
-`screenshots`という`lane`がありますね。
 
 ### fastlane/Snapfileを確認
 ```
@@ -92,7 +93,6 @@ end
 # fastlane action snapshot
 
 ```
-全ての設定項目がコメントアウトされているので有効にしたい設定項目がある場合`#`を削除して有効化しましょう。
 
 ### プロジェクトの`UITests`内に`SnapshotHelper.swift`を追加
 
