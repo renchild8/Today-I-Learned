@@ -1,4 +1,4 @@
-# Objective-CからSwiftのクラスを参照する方法
+# Objective-CからSwiftのクラスを参照する
 
 
 ### `hoge.m`ファイルで`[ProjectName]-Swift.h`をインポートする。
