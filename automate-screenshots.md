@@ -1,17 +1,17 @@
 # fastlaneの導入
 
 ### bundlerのインストール
-```
+```bash
 sudo gem install bundler
 ```
 
 ### Gemfileの作成
-```
+```bash
 bundle init
 ```
 
 ### Gemfileを編集
-```
+```bash
 vim Gemfile
 ```
 
@@ -23,12 +23,12 @@ gem "fastlane"
 ```
 
 ### パス指定でGemをインストール
-```
+```bash
 bundle install --path vendor/bundler
 ```
 
 ### fastlaneの初期設定
-```
+```bash
 bundle exec fastlane init
 ```
 
@@ -93,3 +93,24 @@ end
 
 ```
 全ての設定項目がコメントアウトされているので有効にしたい設定項目がある場合`#`を削除して有効化しましょう。
+
+### プロジェクトの`UITests`内に`SnapshotHelper.swift`を追加
+
+### UITestsクラスのsetUp()にコードを追加
+
+```swift
+let app = XCUIApplication()
+setupSnapshot(app)
+app.launch()
+```
+
+### UITestsクラスのtestExample()にコードを追加
+
+```swift
+snapshot("testExample")
+```
+
+### ターミナルでlaneを実行
+```bash
+bundle exec fastlane screenshots
+```
