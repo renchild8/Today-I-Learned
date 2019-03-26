@@ -1,17 +1,22 @@
 # fastlaneの導入
 
-### bundlerのインストール
+導入したいプロジェクトまで移動
+```bash
+cd {projectName}
 ```
+
+### bundlerのインストール(既にあれば不要)
+```bash
 sudo gem install bundler
 ```
 
 ### Gemfileの作成
-```
+```bash
 bundle init
 ```
 
 ### Gemfileを編集
-```
+```bash
 vim Gemfile
 ```
 
@@ -23,17 +28,17 @@ gem "fastlane"
 ```
 
 ### パス指定でGemをインストール
-```
+```bash
 bundle install --path vendor/bundler
 ```
 
 ### fastlaneの初期設定
-```
+```bash
 bundle exec fastlane init
 ```
 
 ### 何を自動化するかを答える
-```
+```bash
 1. 📸  Automate screenshots
 2. 👩‍✈️  Automate beta distribution to TestFlight
 3. 🚀  Automate App Store distribution
@@ -57,7 +62,7 @@ end
 ```
 
 ### slackTestを実行
-```
+```bash
 bundle exec fastlane slackTest
 ```
 これで通知が来ればOK
