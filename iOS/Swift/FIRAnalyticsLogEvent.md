@@ -22,19 +22,20 @@ pod install
 ```
 
 ### 3. `UIApplicationDelegate` で `Firebase` をインポートする。
-```
+```swift
 import Firebase
 ```
 
 ### 4. `FirebaseApp` のインスタンスを作成する。
 通常は`AppDelegate`の `application:didFinishLaunchingWithOptions:` メソッドで行う。
-```
+```swift
 FirebaseApp.configure()
 ```
 
 ### 5. 任意のタイミングでLogEventを送信する。
-```
-Analytics.logEvent("cusutom_event", parameters: ["custom_parameter1": "hoge" ,"custom_parameter2": 1])
+```swift
+// イベント: login パラメータ: user_id, job
+Analytics.logEvent("login", parameters: ["user_id" : "renchild8", "job": "Engineer"])
 ```
 
 
