@@ -1,3 +1,6 @@
+
+[Azure Face API のセットアップ](https://github.com/renchild8/Today-I-Learned/blob/master/Azure/FaceIdentify.md)
+
 # 環境
 macOS Catalina 10.15  
 Xcode 11.1  
