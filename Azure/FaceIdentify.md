@@ -336,3 +336,5 @@ curl -X POST "https://${ENDPOINT}/face/v1.0/identify" -H "Ocp-Apim-Subscription-
 
 レスポンスの `confidence` が信頼度です。  
 こちらの値を利用して判定を行うことになります。  
+
+[カメラ連携](https://github.com/renchild8/Today-I-Learned/blob/master/iOS/Swift/FaceAuth.md)
