@@ -13,6 +13,8 @@ alias push='git push'
 alias pull='git pull'
 alias fetch='git fetch'
 alias stash='git stash'
+alias clone='git clone'
+alias gd='git diff'
 
 # git reset
 alias grh='git reset --hard'
@@ -21,7 +23,6 @@ alias grh='git reset --hard'
 alias gbr='git branch'
 alias gch='git checkout'
 alias gst='git status'
-alias gd='git diff'
 
 # git log
 alias gl='git log --oneline -n 50'
