@@ -1,12 +1,13 @@
-# ls
+# alias
+## ls
 alias ll='ls -l'
 alias la='ls -la'
 
-# rm
-# brew install rmtrash
+## rm
+### brew install rmtrash
 alias rm='rmtrash'
 
-# git
+## git
 alias add='git add'
 alias com='git commit'
 alias push='git push'
@@ -16,30 +17,32 @@ alias stash='git stash'
 alias clone='git clone'
 alias gd='git diff'
 
-# git reset
+## git reset
 alias grh='git reset --hard'
 
-# git branch
+## git branch
 alias gbr='git branch'
 alias gch='git checkout'
 alias gst='git status'
 
-# git log
+## git log
 alias gl='git log --oneline -n 50'
 alias gg='git log --oneline --graph --all'
 alias graph='git graph'
 
-# fastlane
-alias fastlane='bundle exec fastlane'
+## carthage
+alias cupi='carthage update --platform iOS'
+alias cbpi='carthage bootstrap --platform iOS'
 
 
-# gitの設定
+# branch name
+## git setting
 source /usr/local/etc/bash_completion.d/git-prompt.sh
 source /usr/local/etc/bash_completion.d/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
 
-# color
-# default:cyan / root:red
+## color
+## default:cyan / root:red
 if [ $UID -eq 0 ]; then
     PS1='\[\033[31m\]\u@\h\[\033[00m\]:\[\033[01m\]\W\[\033[31m\]$(__git_ps1)\[\033[00m\]\\$ '
 else
